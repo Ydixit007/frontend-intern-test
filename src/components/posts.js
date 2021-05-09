@@ -1,12 +1,12 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "../styles/card.css";
 
 const Posts = ({id,title,image,discription,date,author}) => {
     let publishDate = new Date(date*1000);
     return (
         <div className="card">
-            <NavLink to={{pathname:`/${id}`}} className="image" style={{ backgroundImage: `url(${image.small})`}} />
+            <Link to={{pathname:`/${id}`}} className="image" style={{ backgroundImage: `url(${image.small})`}} />
             <div className="image1"  >
             </div>
             <div className="content" >

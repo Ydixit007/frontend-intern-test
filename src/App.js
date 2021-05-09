@@ -15,19 +15,16 @@ const App = () => {
   .then((response)=>{
     return response.json()
   }).then((data) =>{
-    setpost(data)
-    setLoading(false)
+    setpost(data);
+    setLoading(false);
   })
-  }
+  };
 
   useEffect(
     () => {
       getData();
     },[]
   );
-
-  console.log(post)
-
   return (
     <>
     <BrowserRouter>
