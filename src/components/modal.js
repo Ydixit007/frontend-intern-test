@@ -37,8 +37,8 @@ const Modal = (props) => {
                 </div>
                 <div className="author">
                     <div className="avatar"></div>
-                    <h5 className="name"></h5>
-                    <h5 className="role"></h5>
+                    <h5 className="name">author</h5>
+                    <h5 className="role">role</h5>
                 </div>
             </div>
         </div>
