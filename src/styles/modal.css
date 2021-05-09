@@ -1,0 +1,159 @@
+.modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.modal-container .modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80vh;
+  width: 80vh;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.modal-container .exit-btn-container {
+  width: 100%;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-container .exit-btn-container .exit-btn {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 4px;
+  width: 50px;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-container .exit-btn-container .exit-btn .line {
+  margin: 4px;
+  width: 60%;
+  height: 4px;
+  background-color: #D2D7DB;
+  -webkit-transform: rotate(45deg) translate(6px, 3px);
+          transform: rotate(45deg) translate(6px, 3px);
+}
+
+.modal-container .exit-btn-container .exit-btn .line:nth-child(2) {
+  -webkit-transform: rotate(-45deg) translate(6px, -3px);
+          transform: rotate(-45deg) translate(6px, -3px);
+}
+
+.modal-container .image {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+
+.modal-container .content {
+  width: 100%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 16px 16px 0px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-container .content .title {
+  margin-right: auto;
+  margin-top: 8px;
+  font-weight: 900;
+}
+
+.modal-container .content .discription {
+  color: #A5AFB8;
+  font-weight: normal;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 1.2;
+  max-height: 60px;
+  overflow: hidden;
+}
+
+.modal-container .author {
+  color: #A5AFB8;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 16px 12px 16px;
+}
+
+.modal-container .author .avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.modal-container .author .name {
+  margin: 0px 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-container .modal {
+    height: 100vh;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=modal.css.map */

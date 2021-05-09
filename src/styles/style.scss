@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #D2D2D2;
+}
+
+.App {
+    @include flex();
+    min-height: 150vh;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-container {
+    height: 100%;
+    width: 80%;
+    @include flex();
+    flex-wrap: wrap;
+}
+
+.loadingScreen {
+    width: 100%;
+    height: 100vh;
+}
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    @include flex();
+}
+
+.loading>img {
+    width: 5%;
+}

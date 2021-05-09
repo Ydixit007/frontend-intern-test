@@ -1,24 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/style.css";
+import React, { useEffect, useState } from 'react';
+import Modal from "./components/modal"
+import Posts from "./components/posts";
+import loadingScreen from "./components/service/loading";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
-function App() {
+const App = () => {
+  
+  const [post , setpost] = useState([]);
+  const [loading , setLoading] = useState(true);
+
+  const getData = async() =>{
+    await fetch("https://my-json-server.typicode.com/Codeinwp/front-end-internship-api/posts")
+  .then((response)=>{
+    return response.json()
+  }).then((data) =>{
+    setpost(data)
+    setLoading(false)
+  })
+  }
+
+  useEffect(
+    () => {
+      getData();
+    },[]
+  );
+
+  console.log(post)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <BrowserRouter>
+    {
+      loading ? 
+      <div className="loadingScreen">
+        {loadingScreen()}
+      </div>:
+      <div className="App">
+      <div className="card-container">
+      {
+        post.map( post => (
+          <Posts
+          key={post.id}
+          id={post.id}
+          title={post.title}
+          discription={post.content}
+          date={post.date}
+          author={[post.author]}
+          image={post.thumbnail}
+          />
+        ))
+      }
+      </div>
+      <Switch>
+        <Route path="/:id" component={Modal}/>
+      </Switch>
     </div>
+    }
+    </BrowserRouter>
+    </>
   );
 }
 
